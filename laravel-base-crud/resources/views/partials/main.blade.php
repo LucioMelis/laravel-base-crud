@@ -6,7 +6,7 @@
     <!-- container Comics  -->
     <div class="container-bg-main-bottom">
         <div class="content-dc-series">
-            @foreach ($comics as $key => $comic)
+            @foreach ($comics as $comic)
                 <div class="card-fumetto">
                     <a href="#">
                         <img src="{{ $comic->getImage() }}" alt="{{ $comic->title }}" />
