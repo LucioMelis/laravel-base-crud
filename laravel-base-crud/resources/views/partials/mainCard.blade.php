@@ -14,7 +14,7 @@
                 <div class="status">
                     <p>
                         <span>U.S. Price: </span>
-                        {{ $comics->price }}
+                        {{ $comics->price }} $
                     </p>
                     <div>AVAILABLE</div>
                 </div>
