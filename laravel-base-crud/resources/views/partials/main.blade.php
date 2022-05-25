@@ -8,7 +8,7 @@
         <div class="content-dc-series">
             @foreach ($comics as $comic)
                 <div class="card-fumetto">
-                    <a href="#">
+                    <a href="{{ route('comics.show', $comic->id) }}">
                         <img src="{{ $comic->getImage() }}" alt="{{ $comic->title }}" />
                         <p>{{ $comic->title }}</p>
                     </a>
