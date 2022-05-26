@@ -3,37 +3,37 @@
 @section('content')
     <div class="container-bg-main-bottom">
         <div class="content-dc-series">
-            <form action="{{ route('comics.store') }}" method="POST">
+            <form action="{{ route('comics.update', $comics->id) }}" method="POST">
                 @csrf
                 @method('PUT')
                 <div class="container-input">
                     <div>
-                        <label for="title">1.Inserisci il titolo del Fumetto :</label>
-                        <input type="text" name="title">
+                        <label for="title">1.Modifica il titolo del Fumetto :</label>
+                        <input type="text" name="title" value="{{ $comics->title }}">
                     </div>
 
                     <div>
-                        <label for="price">2.Inserisci il prezzo :</label>
-                        <input type="text" name="price">
+                        <label for="price">2.Modifica il prezzo :</label>
+                        <input type="text" name="price" value="{{ $comics->price }}">
                     </div>
                     <div>
-                        <label for="series">3.Inserisci serie :</label>
-                        <input type="text" name="series">
-                    </div>
-
-                    <div>
-                        <label for="sale_date">4.Inserisci data vendita :</label>
-                        <input type="text" name="sale_date">
+                        <label for="series">3.Modifica serie :</label>
+                        <input type="text" name="series" value="{{ $comics->series }}">
                     </div>
 
                     <div>
-                        <label for="type">5.Inserisci il tipo :</label>
-                        <input type="text" name="type">
+                        <label for="sale_date">4.Modifica data vendita :</label>
+                        <input type="text" name="sale_date" value="{{ $comics->sale_date }}">
                     </div>
 
                     <div>
-                        <label for="description">6.Inserisci descrizione :</label>
-                        <textarea name="description" cols="30" rows="10"></textarea>
+                        <label for="type">5.Modifica il tipo :</label>
+                        <input type="text" name="type" value="{{ $comics->type }}">
+                    </div>
+
+                    <div>
+                        <label for="description">6.Modifica descrizione :</label>
+                        <textarea name="description" cols="30" rows="10">{{ $comics->description }}</textarea>
                     </div>
                 </div>
                 {{-- sezione submit --}}
