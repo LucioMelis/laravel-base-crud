@@ -16,7 +16,9 @@
             @endforeach
         </div>
         <div class="container-button">
-            <button>LOAD MORE</button>
+            <a href="{{ route('comics.create') }}">
+                <button>ADD COMIC</button>
+            </a>
         </div>
     </div>
 </main>
