@@ -341,3 +341,21 @@ a {
   text-decoration: none;
 }
 
+.container-input {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container-input div {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 100px;
+       column-gap: 100px;
+  margin-top: 15px;
+}
+
+label {
+  color: white;
+}
+
