@@ -21,6 +21,12 @@
                 <div class="check-status">Check Availability &#9662;</div>
             </div>
             <p class="description">{{ $comics->description }}</p>
+            <form action="{{ route('comics.destroy', $comics->id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="edit" type="submit">DELETE</button>
+            </form>
+
         </div>
         <div class="advertisement">
             <h5>ADVERTISEMENT</h5>
