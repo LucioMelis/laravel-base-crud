@@ -68,7 +68,7 @@ class ComicsController extends Controller
      */
     public function edit($id)
     {
-        $comics= Pasta::find($id);
+        $comics= Comic::find($id);
         return view('comics.edit', ['comics'=>$comics]);
     }
 
@@ -81,7 +81,16 @@ class ComicsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $comics= Comic::find($id);
+        $inputData= $request->all();
+        $comics->title= $inputData['title'];
+        $comics->description= $inputData['description'];
+        $comics->price= $inputData['price'];
+        $comics->series= $inputData['series'];
+        $comics->sale_date= $inputData['sale_date'];
+        $comics->type= $inputData['type'];
+        $comics->save();
+        return redirect()->route('comics.index', ['comics'=>$comics]);
     }
 
     /**

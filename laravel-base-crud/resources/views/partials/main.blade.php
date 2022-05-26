@@ -11,10 +11,9 @@
                     <a href="{{ route('comics.show', $comic->id) }}">
                         <img src="{{ $comic->getImage() }}" alt="{{ $comic->title }}" />
                         <p>{{ $comic->title }}</p>
-
-                        <a href="{{ route('comics.edit'), $comic->id }}">
-                            <button class="edit">Edit</button>
-                        </a>
+                    </a>
+                    <a href="{{ route('comics.edit', $comic->id) }}">
+                        <button class="edit">Edit</button>
                     </a>
                 </div>
             @endforeach

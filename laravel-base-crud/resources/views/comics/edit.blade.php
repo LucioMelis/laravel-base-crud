@@ -39,7 +39,7 @@
                 {{-- sezione submit --}}
                 <div class="container-button">
                     <a href="{{ route('comics.create') }}">
-                        <button type="submit">ADD</button>
+                        <button type="submit">CONFIRM CHANGE</button>
                     </a>
                 </div>
             </form>
