@@ -16,6 +16,13 @@ a {
   color: white;
 }
 
+.edit {
+  color: white;
+  font-weight: bold;
+  background-color: #047ff7;
+  padding: 5px 15px;
+}
+
 .container-header {
   width: 70%;
   margin: auto;
