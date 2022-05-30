@@ -1,5 +1,9 @@
 @extends('layout')
 
+@section('title')
+    Edit Comic
+@endsection
+
 @section('content')
     <div class="container-bg-main-bottom">
         <div class="content-dc-series">
